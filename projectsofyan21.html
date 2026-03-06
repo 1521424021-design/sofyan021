@@ -98,7 +98,31 @@
             border-color: var(--primary);
             box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
         }
+/* Efek Hover dan Animasi Tombol */
+button {
+    transition: all 0.3s ease; /* Membuat perubahan warna/ukuran terasa halus  */
+    cursor: pointer; [cite: 99, 101]
+}
 
+button:hover {
+    transform: scale(1.05); /* Sedikit membesar saat kursor di atas tombol */
+    filter: brightness(1.2); /* Tombol menjadi sedikit lebih terang */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Menambah bayangan agar terlihat timbul */
+}
+
+button:active {
+    transform: scale(0.95); /* Sedikit mengecil saat diklik (memberi efek ditekan) */
+}
+
+/* Animasi Masuk saat Halaman Dibuka */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.8s ease-out; /* Seluruh konten akan muncul perlahan */
+}
         .btn {
             background: var(--primary);
             color: white;
